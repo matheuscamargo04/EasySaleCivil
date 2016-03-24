@@ -16,9 +16,9 @@ public class Corretora {
 		private static final long serialVersionUID = -6205736467530609550L;
 		
 		@Id
-		@Column(name = "cod_corretora", nullable = false)
+		@Column(name = "id_corretora", nullable = false)
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
-		private Long codCorretora;
+		private Long id;
 		
 		@Column(name = "nome_corretora", nullable = false)
 		private String nomeCorretora;

@@ -18,9 +18,9 @@ public class Corretor {
 		private static final long serialVersionUID = 5747942826652036099L;
 
 		@Id
-		@Column(name = "cod_corretor", nullable = false)
+		@Column(name = "id_corretor", nullable = false)
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
-		private Long codCorretor;
+		private Long idCorretor;
 		
 		@Column(name = "nome_corretor", nullable = false)
 		private String nomeCorretor;
@@ -35,12 +35,12 @@ public class Corretor {
 		@JoinColumn(name = "corretora_associada", referencedColumnName = "cod_corretora", nullable = false)
 		private Corretora corretora;
 
-		public Long getCodCorretor() {
-			return codCorretor;
+		public Long getIdCorretor() {
+			return idCorretor;
 		}
 
-		public void setCodCorretor(Long codCorretor) {
-			this.codCorretor = codCorretor;
+		public void setidCorretor(Long idCorretor) {
+			this.idCorretor = idCorretor;
 		}
 
 		public String getNomeCorretor() {

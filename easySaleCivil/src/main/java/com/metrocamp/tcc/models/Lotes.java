@@ -15,6 +15,9 @@ public class Lotes implements Serializable{
 	private static final long serialVersionUID = 4678024610932259072L;
 
 	@Id
+	@Column(name = "id", nullable = false)
+	private Long id;
+	
 	@Column(name = "cod_lote", nullable = false)
 	private String codLote;
 	
@@ -33,6 +36,14 @@ public class Lotes implements Serializable{
 	@OneToOne
 	@JoinColumn(name = "cod_corretora", referencedColumnName = "cod_corretora", nullable = false)
 	private Corretora corretora;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getCodLote() {
 		return codLote;
